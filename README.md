@@ -9,15 +9,15 @@ https://github.com/fchollet/keras/blob/44bf298ec3236f4a7281be04716a58163469b4de/
 2) keras_weights_converter.py - convert any VGG16 Keras weights to format needed by ZFC_VGG16_CPU
 3) values_checker.py - program to check if results are the same in Keras and in C program
 
-# Installation
+# Installation on Ubuntu
 
-gcc -O3 -fopenmp ZFC_VGG16_CPU.c -o ZFC_VGG16_CPU.exe -lm
+gcc -O3 -fopenmp ZFC_VGG16_CPU.c -o ZFC_VGG16_CPU -lm
 
 # Usage
 
-ZFC_VGG16_CPU.exe <weights_path> <file_with_list_of_images> <output_file> <output_convolution_features_(optional)>
+./ZFC_VGG16_CPU <weights_path> <file_with_list_of_image_paths> <output_file> <output_convolution_features_(optional)>
 
-Example: ZFC_VGG16_CPU.exe "weights.txt" "image_list.txt" "results.txt" 1
+Example: ./ZFC_VGG16_CPU "weights.txt" "image_list.txt" "results.txt" 1
 
 # Downloads
 
